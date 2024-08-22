@@ -21,13 +21,15 @@ useEffect(()=> {
 
   return (
     <div className="App">
-      <div className='quote'>
-        <p>QOTD: <strong>{quote.quote}</strong></p>
-        <p>Author: <strong>{quote.author}</strong></p>  {/* Use destructuring to access properties directly */}
+      <div className='quote' id="quote-box">
+        <p id="text">QOTD: <strong>{quote.quote}</strong></p>
+        <p id="author">Author: <strong>{quote.author}</strong></p>
+        <div className='btn'>
+          <button onClick={getQuote} id="new-quote">Get Quote</button>
+          <a href="" className='btn' id="tweet-quote">Post Quote</a>
+        </div>
       </div>
-      <div className='btn'>
-        <button onClick={getQuote}>Get Quote</button>
-      </div>
+      
     </div>
   )
 }

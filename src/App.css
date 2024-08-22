@@ -1,4 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  min-height: 100vh;
   font-family: sans-serif;
-  text-align: center;
+  display: flex;
+  background: #664b92;
+}
+
+.quote {
+  margin: auto;
+  width: 100%;
+  max-width: 400px;
+  min-width: 200px;
+  background: #555;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
 }

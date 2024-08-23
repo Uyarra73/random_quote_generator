@@ -22,10 +22,10 @@ useEffect(()=> {
   return (
     <div className="App">
       <div className='quote' id="quote-box">
-        <p id="text">QOTD: <strong>{quote.quote}</strong></p>
+        <p id="text">QOTD: <strong>" {quote.quote} "</strong></p>
         <p id="author">Author: <strong>{quote.author}</strong></p>
-        <div className='btn'>
-          <button onClick={getQuote} id="new-quote">Get Quote</button>
+        <div className='btn-container'>
+          <button onClick={getQuote} className='btn' id="new-quote">Get Quote</button>
           <a href="" className='btn' id="tweet-quote">Post Quote</a>
         </div>
       </div>

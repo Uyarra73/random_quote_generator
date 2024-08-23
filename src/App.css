@@ -14,10 +14,52 @@
 .quote {
   margin: auto;
   width: 100%;
-  max-width: 400px;
-  min-width: 200px;
+  max-width: 600px;
+  min-width: 300px;
   background: #555;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.5;
+  color: #fff;
+  padding: 10px;
+  word-wrap: break-word;
+}
+
+.btn-container {
+  display:inline-block;
+
+}
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #555;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-right: 12px;
+}
+
+button, a {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+button:hover, a:hover {
+  background: #4d8fdb;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
 }

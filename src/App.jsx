@@ -1,8 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './App.css'
 
 function App() {
 const [quote, setQuote] = useState("");
+const colors = ["green", "yellow", "blue", "magenta", "orange", "yellowgreen"];
+const textRef = useRef();
 
 const getQuote = () => {
   
@@ -17,16 +19,20 @@ const getQuote = () => {
 
 useEffect(()=> {
   getQuote()
-}, [])
+}, []);
+
+useEffect(() => {
+  textRef.current.style.color = colors[Math.floor(Math.random()*colors.length)]
+}, [quote]);
 
   return (
     <div className="App">
       <div className='quote' id="quote-box">
-        <p id="text">QOTD: <strong>" {quote.quote} "</strong></p>
+        <p id="text" ref={textRef}>QOTD: <strong>" {quote.quote} "</strong></p>
         <p id="author">Author: <strong>{quote.author}</strong></p>
         <div className='btn-container'>
           <button onClick={getQuote} className='btn' id="new-quote">Get Quote</button>
-          <a href="" className='btn' id="tweet-quote">Post Quote</a>
+          <a href="" target='_blank' rel='noopener noreferer' className='btn' id="tweet-quote">Post Quote</a>
         </div>
       </div>
       

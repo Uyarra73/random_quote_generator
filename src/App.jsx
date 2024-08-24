@@ -22,13 +22,13 @@ useEffect(()=> {
 }, []);
 
 useEffect(() => {
-  textRef.current.style.color = colors[Math.floor(Math.random()*colors.length)]
+  textRef.current.style.background = colors[Math.floor(Math.random()*colors.length)]
 }, [quote]);
 
   return (
-    <div className="App">
+    <div className="App" ref={textRef}>
       <div className='quote' id="quote-box">
-        <p id="text" ref={textRef}>QOTD: <strong>" {quote.quote} "</strong></p>
+        <p id="text">QOTD: <strong>" {quote.quote} "</strong></p>
         <p id="author">Author: <strong>{quote.author}</strong></p>
         <div className='btn-container'>
           <button onClick={getQuote} className='btn' id="new-quote">Get Quote</button>
